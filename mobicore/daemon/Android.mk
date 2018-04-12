@@ -45,46 +45,6 @@ include $(LOCAL_PATH)/Kernel/Android.mk
 
 include $(BUILD_SHARED_LIBRARY)
 
-# Daemon Application
-# =============================================================================
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := mcDriverDaemon
-LOCAL_MODULE_TAGS := optional
-LOCAL_CFLAGS += -include buildTag.h
-LOCAL_CFLAGS += -DLOG_TAG=\"McDaemon\"
-LOCAL_CFLAGS += -DTBASE_API_LEVEL=3
-LOCAL_C_INCLUDES += $(GLOBAL_INCLUDES)
-LOCAL_SHARED_LIBRARIES += $(GLOBAL_LIBRARIES) libMcClient liblog
-
-include $(LOCAL_PATH)/Daemon/Android.mk
-
-# Common Source files required for building the daemon
-LOCAL_SRC_FILES += Common/CMutex.cpp \
-	Common/Connection.cpp \
-	Common/NetlinkConnection.cpp \
-	Common/CSemaphore.cpp \
-	Common/CThread.cpp
-
-# Includes required for the Daemon
-LOCAL_C_INCLUDES +=\
-	$(LOCAL_PATH)/ClientLib/public \
-	$(LOCAL_PATH)/Common \
-	$(LOCAL_PATH)/../common/LogWrapper
-
-
-# Private Registry components
-LOCAL_C_INCLUDES += $(LOCAL_PATH)/Registry/Public \
-	$(LOCAL_PATH)/Registry
-LOCAL_SRC_FILES  += Registry/PrivateRegistry.cpp
-
-# Common components
-include $(LOCAL_PATH)/Kernel/Android.mk
-
-LOCAL_CFLAGS += -DLOG_ANDROID
-
-include $(BUILD_EXECUTABLE)
-
 # Registry Shared Library
 # =============================================================================
 include $(CLEAR_VARS)
