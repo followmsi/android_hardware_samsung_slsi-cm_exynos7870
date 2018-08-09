@@ -28,7 +28,7 @@
 #include <openssl/err.h>
 #include <openssl/x509.h>
 
-#include <UniquePtr.h>
+#include <nativehelper/UniquePtr.h>
 
 #define LOG_TAG "ExynosKeyMaster"
 #include <cutils/log.h>
