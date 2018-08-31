@@ -13,6 +13,7 @@ LOCAL_MODULE := libMcClient
 LOCAL_MODULE_TAGS := debug eng optional
 LOCAL_C_INCLUDES += $(GLOBAL_INCLUDES)
 LOCAL_SHARED_LIBRARIES += $(GLOBAL_LIBRARIES) liblog
+LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_CFLAGS := -fvisibility=hidden -fvisibility-inlines-hidden
 LOCAL_CFLAGS += -include buildTag.h
@@ -94,6 +95,7 @@ LOCAL_MODULE_TAGS := debug eng optional
 LOCAL_CFLAGS += -DLOG_TAG=\"McRegistry\"
 LOCAL_C_INCLUDES += $(GLOBAL_INCLUDES)
 LOCAL_SHARED_LIBRARIES += $(GLOBAL_LIBRARIES) liblog
+LOCAL_PROPRIETARY_MODULE := true
 
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/Common \
 	$(LOCAL_PATH)/Daemon/public \
