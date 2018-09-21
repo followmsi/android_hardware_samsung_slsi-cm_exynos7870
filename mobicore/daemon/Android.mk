@@ -40,6 +40,7 @@ LOCAL_EXPORT_C_INCLUDE_DIRS +=\
 	$(LOCAL_PATH)/ClientLib/public
 
 LOCAL_CFLAGS += -DLOG_ANDROID
+LOCAL_CFLAGS += -Wno-error
 
 include $(LOCAL_PATH)/Kernel/Android.mk
 
@@ -71,5 +72,6 @@ LOCAL_SRC_FILES += Common/CMutex.cpp \
 include $(LOCAL_PATH)/Registry/Android.mk
 
 LOCAL_CFLAGS += -DLOG_ANDROID
+LOCAL_CFLAGS += -Wno-error
 
 include $(BUILD_SHARED_LIBRARY)
