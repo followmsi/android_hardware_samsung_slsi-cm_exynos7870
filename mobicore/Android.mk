@@ -37,7 +37,7 @@ GDM_PROVLIB_SHARED_LIBS=libMcClient
 # Include the provisioning lib
 #include $(MOBICORE_PROJECT_PATH)/provlib/Android.mk
 
-LOCAL_ADDITIONAL_DEPENDENCIES += INSTALLED_KERNEL_HEADERS
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 
 MOBICORE_DIR_INC := $(MC_INCLUDE_DIR) $(MOBICORE_PROJECT_PATH)/common/curl/include
 include $(MOBICORE_PROJECT_PATH)/rootpa/Code/Android/app/jni/Android.mk

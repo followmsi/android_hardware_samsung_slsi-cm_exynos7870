@@ -38,7 +38,7 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/frameworks/native/libs/nativebase/include \
 	$(TOP)/frameworks/native/libs/nativewindow/include
 
-LOCAL_ADDITIONAL_DEPENDENCIES += INSTALLED_KERNEL_HEADERS
+LOCAL_HEADER_LIBRARIES := generated_kernel_headers
 
 LOCAL_CFLAGS += -Wno-error
 
