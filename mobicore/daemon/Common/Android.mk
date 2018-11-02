@@ -10,6 +10,9 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE	:= Common
 
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-format
+
 # Add new source files here
 #LOCAL_SRC_FILES +=\
 #	CMutex.cpp\

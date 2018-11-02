@@ -15,3 +15,5 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/$(FSD_PATH)/public \
 
 # Add new source files here
 LOCAL_SRC_FILES += $(FSD_PATH)/FSD.cpp
+
+LOCAL_CFLAGS += -Wno-missing-field-initializers

@@ -43,6 +43,8 @@ LOCAL_C_INCLUDES += $(TOP)/hardware/samsung_slsi-cm/exynos/libhdmi_legacy
 endif
 endif
 
+LOCAL_CFLAGS += -Wno-unused-function
+
 LOCAL_SRC_FILES := \
 	ExynosExternalDisplayModule.cpp
 

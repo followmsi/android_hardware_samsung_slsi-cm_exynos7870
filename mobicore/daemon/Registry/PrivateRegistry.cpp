@@ -494,7 +494,7 @@ mcResult_t mcRegistryStoreTABlob(mcSpid_t spid, void *blob, uint32_t size)
 
         // Check attestation size
         if (getAsUint32BE(&pUa->size) < sizeof(uuid_attestation)) {
-            LOG_E("RegistryStoreTABlob failed - Attestation size is equal to %d and is less then %d", getAsUint32BE(&pUa->size), sizeof(uuid_attestation));
+            LOG_E("RegistryStoreTABlob failed - Attestation size is equal to %d and is less then %d", (int)getAsUint32BE(&pUa->size), (int)sizeof(uuid_attestation));
             return MC_DRV_ERR_TA_ATTESTATION_ERROR;
         }
 
